@@ -1,0 +1,54 @@
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 400px;
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    position: relative;
+    outline: none;
+    margin: 15px;
+}
+
+.submit-btn {
+    background-color: #4CAF50;
+    color: white;
+
+    &:disabled {
+        background-color: #9E9E9E;
+        cursor: not-allowed;
+    }
+
+    &:hover {
+        background-color: #45a049;
+        transform: translateY(-2px);
+    }
+
+    &:hover::after {
+        content: url('https://example.com/your-gif.gif');
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        width: 24px;
+        height: 24px;
+    }
+}

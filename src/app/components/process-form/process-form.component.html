@@ -1,0 +1,41 @@
+<form (ngSubmit)="onSubmit()" [@fadeIn]>
+    <mat-form-field appearance="fill" [@fadeIn]>
+        <mat-label>Title</mat-label>
+        <input matInput [(ngModel)]="title" name="title" required>
+        <mat-error *ngIf="!title">Please enter the title</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" [@fadeIn]>
+        <mat-label>Description</mat-label>
+        <input matInput [(ngModel)]="description" name="description" required>
+        <mat-error *ngIf="!description">Please enter the description</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" [@fadeIn]>
+        <mat-label>Start Date</mat-label>
+        <input matInput type="date" [(ngModel)]="startDate" name="startDate" required>
+        <mat-error *ngIf="!startDate">Please select the start date</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" [@fadeIn]>
+        <mat-label>End Date</mat-label>
+        <input matInput type="date" [(ngModel)]="endDate" name="endDate" required>
+        <mat-error *ngIf="!endDate">Please select the end date</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" [@fadeIn]>
+        <mat-label>Status</mat-label>
+        <mat-select [(ngModel)]="status" name="status" required>
+            <mat-option value="Pending">Pending</mat-option>
+            <mat-option value="In Progress">In Progress</mat-option>
+            <mat-option value="Completed">Completed</mat-option>
+        </mat-select>
+        <mat-error *ngIf="!status">Please select the status</mat-error>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit" [@fadeIn]>Save Process</button>
+</form>
+
+<div *ngIf="responseMessage" class="response-message" [@fadeIn]>
+    <p>{{ responseMessage }}</p>
+</div>
