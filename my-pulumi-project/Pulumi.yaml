@@ -1,0 +1,10 @@
+name: process-management
+description: a learning project made in angular simple curd operations with backend in node and using file system
+runtime:
+  name: nodejs
+  options:
+    packagemanager: npm
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: typescript
